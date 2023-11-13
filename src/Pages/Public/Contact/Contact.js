@@ -27,8 +27,8 @@ const Apropos = () => {
                         <img className='Photo_Theo' src={Photo_Brendan} alt="PhotoTheo" />
                     </div>
                     <div className='Block_Texte'>
+                        <h2>BESOIN D'UN RENSEIGNEMENT ?</h2>
                         <div className='Infos_Contact'>
-                            <h2>BESOIN D'UN RENSEIGNEMENT ?</h2>
                             <ul>
                                 <li>
                                     <img onClick={() => handleImageClick(0)} src={Phone} alt="Phone" />

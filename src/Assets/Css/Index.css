@@ -47,14 +47,14 @@ body .SectionApropos .Container_Apropos .Apropos, body .SectionGalerie .Containe
   justify-content: center;
 }
 
-body .SectionGalerie .Container_Galerie .Details, body .Bannière .background_menu .Projet_Contenu, .Carrousel li div {
+body .SectionContact .Container_Contact .Contact .Block_Texte, body .SectionGalerie .Container_Galerie .Details, body .Bannière .background_menu .Projet_Contenu, .Carrousel li div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-body .SectionContact .Container_Contact .Formulaire, body .SectionContact .Container_Contact .Contact .Block_Texte ul li, body .SectionContact .Container_Contact .Contact .Block_Texte, header ul, header {
+body .SectionContact .Container_Contact .Formulaire, body .SectionContact .Container_Contact .Contact .Block_Texte ul li, header ul, header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,13 +71,13 @@ body .SectionContact .Container_Contact .Formulaire, body .SectionContact .Conta
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding: 0;
   list-style: none;
   gap: 0.4em;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   .Carrousel {
     width: 95%;
+    padding: 0;
   }
 }
 .Carrousel li {
@@ -120,7 +120,7 @@ body .SectionContact .Container_Contact .Formulaire, body .SectionContact .Conta
     font-size: 16px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   .Carrousel li div p {
     font-size: 12px;
   }
@@ -160,7 +160,7 @@ body .SectionContact .Container_Contact .Formulaire, body .SectionContact .Conta
   gap: 1.5em;
   padding-top: 2em;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   .Skills-list {
     padding-top: 1em;
   }
@@ -209,21 +209,23 @@ body .SectionContact .Container_Contact .Formulaire, body .SectionContact .Conta
     font-size: 32px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   .ProjectDescription h2 {
     margin-top: 0;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   .ProjectDescription h3 {
     margin: 0.1em;
   }
 }
 .ProjectDescription p {
+  font-size: 18px;
   text-align: justify;
 }
 @media screen and (max-width: 1024px) {
   .ProjectDescription p {
+    font-size: 12px;
     margin-bottom: 0;
   }
 }
@@ -277,7 +279,7 @@ body .SectionContact .Container_Contact .Formulaire, body .SectionContact .Conta
   border-radius: 5px;
   margin-bottom: 5px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .Screen-Desktop .container_liens a {
     padding: 5px;
     font-size: 8px;
@@ -292,7 +294,7 @@ body .SectionContact .Container_Contact .Formulaire, body .SectionContact .Conta
     left: 10%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .Screen-Desktop .container_liens {
     left: 13%;
     top: 33%;
@@ -305,7 +307,7 @@ body .SectionContact .Container_Contact .Formulaire, body .SectionContact .Conta
     left: 28%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .Screen-Desktop {
     width: 43vw;
     height: 19%;
@@ -324,7 +326,7 @@ header {
   box-shadow: 10px 0px 16px -7px rgba(0, 0, 0, 0.2);
   height: 92.4%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   header {
     justify-content: center;
     height: 4%;
@@ -336,7 +338,7 @@ header {
     box-shadow: none;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   header img {
     width: 60%;
     filter: grayscale(200%);
@@ -349,7 +351,7 @@ header ul {
   margin-top: 1.5em;
   padding: 0px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   header ul {
     flex-direction: row;
     margin-top: 0;
@@ -365,7 +367,7 @@ header ul li .elmenu {
   text-decoration: none;
   color: black;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   header ul li .elmenu {
     color: rgb(255, 255, 255);
     font-size: 12px;
@@ -377,7 +379,7 @@ header ul li:hover {
 header ul li .active {
   border-bottom: 1px solid black;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   header ul li .active {
     border-bottom: 1px solid rgb(255, 255, 255);
   }
@@ -387,7 +389,7 @@ header .Reseaux {
   bottom: 15px;
   width: 60%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   header .Reseaux {
     display: none;
     position: static;
@@ -415,13 +417,13 @@ body .Bannière {
   position: relative;
   width: 100%;
   overflow: hidden;
-  max-height: 707px;
+  max-height: 100vh;
 }
 body .Bannière .backgroundimg {
   filter: blur(5px);
   width: 100%;
   transform: scale(2);
-  height: 100vh;
+  height: 100%;
 }
 body .Bannière .backgroundimg_1 {
   filter: blur(5px);
@@ -429,14 +431,15 @@ body .Bannière .backgroundimg_1 {
   width: 100%;
   top: 0px;
   transform: scale(2);
-  height: 100vh;
+  height: 100%;
 }
 body .Bannière .background_menu {
   position: absolute;
-  width: 88%;
+  width: 90%;
+  margin: auto;
   height: 92.4%;
   top: 27px;
-  left: 9.9%;
+  left: 8.3%;
   overflow: hidden;
   box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
   background-color: rgba(255, 255, 255, 0.9);
@@ -446,7 +449,7 @@ body .Bannière .background_menu {
     left: 8.9%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .Bannière .background_menu {
     left: 6%;
   }
@@ -458,7 +461,7 @@ body .Bannière .background_menu .bannerimg {
   z-index: 3;
   filter: brightness(50%);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .Bannière .background_menu .bannerimg {
     width: 100%;
     height: 42%;
@@ -476,7 +479,7 @@ body .Bannière .background_menu .Projet_Contenu {
   width: 40%;
   height: 90%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .Bannière .background_menu .Projet_Contenu {
     top: 0px;
     right: 0px;
@@ -491,7 +494,7 @@ body .Bannière .Photos {
   top: 55%;
   z-index: 10;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .Bannière .Photos {
     top: 8%;
     left: 17%;
@@ -510,7 +513,7 @@ body .Bannière .Photos .image-container:hover {
   transform: translate(-10px, -10px);
   transition: transform 0.3s ease-in-out;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .Bannière .Photos .image-container:hover {
     transform: translate(0px, 0px);
   }
@@ -547,7 +550,7 @@ body .Bannière .Photos .image-container .grayscale {
     width: 110px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .Bannière .Photos .image-container {
     height: 80px;
     width: 55px;
@@ -561,7 +564,7 @@ body .Bannière .Photos .image-container-1 {
     left: 40px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .Bannière .Photos .image-container-1 {
     left: -10px;
   }
@@ -574,7 +577,7 @@ body .Bannière .Photos .image-container-2 {
     left: -40px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .Bannière .Photos .image-container-2 {
     left: -5px;
   }
@@ -587,7 +590,7 @@ body .Bannière .Photos .image-container-3 {
     left: -120px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .Bannière .Photos .image-container-3 {
     left: 0px;
   }
@@ -600,7 +603,7 @@ body .Bannière .Photos .image-container-4 {
     left: -200px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .Bannière .Photos .image-container-4 {
     height: 95px;
     width: 70px;
@@ -611,7 +614,7 @@ body .Bannière .Photos .image-container-4 {
 }
 body .SectionGalerie {
   position: relative;
-  max-height: 707px;
+  max-height: 100vh;
   width: 100%;
   overflow: hidden;
 }
@@ -634,10 +637,10 @@ body .SectionGalerie .backgroundimg_1 {
 }
 body .SectionGalerie .Container_Galerie {
   position: absolute;
-  width: 88%;
+  width: 90%;
   height: 92.4%;
   top: 27px;
-  left: 9.9%;
+  left: 8.3%;
   overflow: hidden;
   box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
   background-color: rgba(255, 255, 255, 0.9);
@@ -647,7 +650,7 @@ body .SectionGalerie .Container_Galerie {
     left: 8.9%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionGalerie .Container_Galerie {
     left: 6%;
   }
@@ -655,7 +658,7 @@ body .SectionGalerie .Container_Galerie {
 body .SectionGalerie .Container_Galerie .Galerie {
   height: 100%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionGalerie .Container_Galerie .Galerie {
     flex-direction: column;
   }
@@ -675,7 +678,7 @@ body .SectionGalerie .Container_Galerie .Galerie h2 {
     font-size: 34px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionGalerie .Container_Galerie .Galerie h2 {
     font-size: 48px;
   }
@@ -685,7 +688,7 @@ body .SectionGalerie .Container_Galerie .Galerie h2 {
     padding-left: 2em;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionGalerie .Container_Galerie .Galerie {
     padding-left: 0em;
   }
@@ -694,7 +697,7 @@ body .SectionGalerie .Container_Galerie .Details {
   width: 60%;
   padding-bottom: 1em;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionGalerie .Container_Galerie .Details {
     width: 100%;
   }
@@ -716,7 +719,7 @@ body .SectionGalerie .Container_Galerie .Details img:hover {
 }
 body .SectionApropos {
   position: relative;
-  max-height: 707px;
+  max-height: 100vh;
   width: 100%;
   overflow: hidden;
 }
@@ -728,10 +731,10 @@ body .SectionApropos .backgroundimg {
 }
 body .SectionApropos .Container_Apropos {
   position: absolute;
-  width: 88%;
+  width: 90%;
   height: 92.4%;
   top: 27px;
-  left: 9.9%;
+  left: 8.3%;
   overflow: hidden;
   box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
   background-color: rgba(255, 255, 255, 0.9);
@@ -741,7 +744,7 @@ body .SectionApropos .Container_Apropos {
     left: 8.9%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionApropos .Container_Apropos {
     left: 6%;
   }
@@ -750,6 +753,7 @@ body .SectionApropos .Container_Apropos .Apropos {
   margin: auto;
   gap: 4em;
   height: 100%;
+  padding-left: 2em;
 }
 @media screen and (max-width: 1024px) {
   body .SectionApropos .Container_Apropos .Apropos {
@@ -757,7 +761,7 @@ body .SectionApropos .Container_Apropos .Apropos {
     padding-left: 2em;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionApropos .Container_Apropos .Apropos {
     flex-direction: column;
     padding-left: 0em;
@@ -772,15 +776,16 @@ body .SectionApropos .Container_Apropos .Apropos .Block_Texte {
     width: 45%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionApropos .Container_Apropos .Apropos .Block_Texte {
     width: 80%;
   }
 }
 body .SectionApropos .Container_Apropos .Apropos .Block_Texte p {
+  font-size: 18px;
   color: black;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionApropos .Container_Apropos .Apropos .Block_Texte p {
     font-size: 10px;
   }
@@ -794,7 +799,7 @@ body .SectionApropos .Container_Apropos .Apropos .Block_Img {
     width: 40%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionApropos .Container_Apropos .Apropos .Block_Img {
     width: 70%;
     height: 44%;
@@ -822,14 +827,14 @@ body .SectionApropos .Container_Apropos h2 {
     font-size: 33px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionApropos .Container_Apropos h2 {
     font-size: 18px;
   }
 }
 body .SectionContact {
   position: relative;
-  max-height: 707px;
+  max-height: 100vh;
   width: 100%;
   overflow: hidden;
 }
@@ -841,10 +846,10 @@ body .SectionContact .backgroundimg {
 }
 body .SectionContact .Container_Contact {
   position: absolute;
-  width: 88%;
+  width: 90%;
   height: 92.4%;
   top: 27px;
-  left: 9.9%;
+  left: 8.3%;
   overflow: hidden;
   box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
   background-color: rgba(255, 255, 255, 0.9);
@@ -857,7 +862,7 @@ body .SectionContact .Container_Contact {
     left: 8.9%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionContact .Container_Contact {
     left: 6%;
   }
@@ -931,7 +936,7 @@ body .SectionContact .Container_Contact h2 {
   font-size: 35px;
   text-shadow: 1px 1px 2px #555;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionContact .Container_Contact h2 {
     font-size: 27px;
     margin: 0;
@@ -960,7 +965,7 @@ body .SectionContact .Container_Contact .Formulaire form input.Email,
 body .SectionContact .Container_Contact .Formulaire form input.Sujet {
   width: 30%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   body .SectionContact .Container_Contact .Formulaire form input.Nom,
   body .SectionContact .Container_Contact .Formulaire form input.Email,
   body .SectionContact .Container_Contact .Formulaire form input.Sujet {
@@ -1013,7 +1018,7 @@ body .background-animation_1 {
   color: white;
   font-size: 14px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   .footer-standard {
     left: 25%;
   }

@@ -4,12 +4,12 @@
     position: relative;
     @extend %flex-center;
     overflow: hidden;
-    padding: 0;
     list-style: none;
     gap: 0.4em;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 769px) {
         width: 95%;
+        padding: 0;
     }
 
     li {
@@ -56,7 +56,7 @@
                     font-size: 16px;
                 }
 
-                @media screen and (max-width: 767px) {
+                @media screen and (max-width: 769px) {
                     font-size: 12px;
                 }
             }

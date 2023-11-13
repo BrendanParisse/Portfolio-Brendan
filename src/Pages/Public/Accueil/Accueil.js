@@ -75,8 +75,6 @@ const Accueil = () => {
                         src={lastImage}
                         alt="ImageBanner"
                     />
-                    <div>
-                    </div>
                     {lastImage === Kasa && (
                         <ImageScreen lastImage={KasaSite} siteLink="https://brendanparisse.github.io/Kasa/" repoLink="https://github.com/BrendanParisse/Kasa" />
                     )}

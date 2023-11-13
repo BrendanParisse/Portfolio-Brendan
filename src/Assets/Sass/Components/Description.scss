@@ -14,22 +14,24 @@
             font-size: 32px;
         }
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 769px) {
             margin-top: 0;
         }
 
     }
 
     h3 {
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 769px) {
             margin: 0.1em;
         }
     }
 
     p {
+        font-size: 18px;
         text-align: justify;
 
         @media screen and (max-width: 1024px) {
+            font-size: 12px;
             margin-bottom: 0;
         }
     }

@@ -9,7 +9,7 @@ header {
     box-shadow: 10px 0px 16px -7px rgba(0, 0, 0, 0.2);
     height: 92.4%;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 769px) {
         justify-content: center;
         height: 4%;
         flex-direction: row;
@@ -22,7 +22,7 @@ header {
 
 
     img {
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 769px) {
             width: 60%;
             filter: grayscale(200%);
         }
@@ -36,7 +36,7 @@ header {
         margin-top: 1.5em;
         padding: 0px;
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 769px) {
             flex-direction: row;
             margin-top: 0;
         }
@@ -51,7 +51,7 @@ header {
                 text-decoration: none;
                 color: black;
 
-                @media screen and (max-width: 767px) {
+                @media screen and (max-width: 769px) {
                     color: rgb(255, 255, 255);
                     font-size: 12px;
                 }
@@ -64,7 +64,7 @@ header {
             .active {
                 border-bottom: 1px solid black;
 
-                @media screen and (max-width: 767px) {
+                @media screen and (max-width: 769px) {
                     border-bottom: 1px solid rgb(255, 255, 255);
                 }
             }
@@ -78,7 +78,7 @@ header {
         @extend %flex-center;
         width: 60%;
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 769px) {
             display: none;
             position: static;
             width: 10%;
