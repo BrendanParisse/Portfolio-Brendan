@@ -1,0 +1,36 @@
+.ProjectDescription {
+    @extend %column-center-1;
+    width: 80%;
+    text-align: center;
+    right: 175px;
+
+    h2 {
+        font-size: 52px;
+        text-shadow: 1px 1px 2px #555;
+        margin-top: 0.5em;
+        margin-bottom: 0;
+
+        @media screen and (max-width: 1024px) {
+            font-size: 32px;
+        }
+
+        @media screen and (max-width: 767px) {
+            margin-top: 0;
+        }
+
+    }
+
+    h3 {
+        @media screen and (max-width: 767px) {
+            margin: 0.1em;
+        }
+    }
+
+    p {
+        text-align: justify;
+
+        @media screen and (max-width: 1024px) {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,652 @@
+body {
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Alata';
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .Bannière {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        max-height: 707px;
+
+        .backgroundimg {
+            filter: blur(5px);
+            width: 100%;
+            transform: scale(2);
+            height: 100vh;
+        }
+
+        .backgroundimg_1 {
+            filter: blur(5px);
+            position: absolute;
+            width: 100%;
+            top: 0px;
+            transform: scale(2);
+            height: 100vh;
+
+        }
+
+        .background_menu {
+            position: absolute;
+            width: 88%;
+            height: 92.4%;
+            top: 27px;
+            left: 9.9%;
+            overflow: hidden;
+            box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
+            background-color: rgb(255, 255, 255, 0.9);
+
+            @media screen and (max-width: 1024px) {
+                left: 8.9%;
+            }
+
+            @media screen and (max-width: 767px) {
+                left: 6%;
+            }
+
+            .bannerimg {
+                object-fit: cover;
+                width: 60%;
+                height: 100%;
+                z-index: 3;
+                filter: brightness(50%);
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    height: 42%;
+                }
+            }
+
+            .CurrBanner {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .Projet_Contenu {
+                @extend %column-center;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 40%;
+                height: 90%;
+
+                @media screen and (max-width: 767px) {
+                    top: 0px;
+                    right: 0px;
+                    width: auto;
+                    height: auto;
+                    position: static;
+                }
+            }
+
+        }
+
+        .Photos {
+            display: flex;
+            position: absolute;
+            top: 55%;
+            z-index: 10;
+
+            @media screen and (max-width: 767px) {
+                top: 8%;
+                left: 17%;
+            }
+
+            .image-container {
+                position: relative;
+                height: 180px;
+                width: 125px;
+                transition: transform 0.3s ease-in-out;
+                cursor: pointer;
+                filter: brightness(100%);
+
+                &:hover {
+                    z-index: 20;
+                    transform: translate(-10px, -10px);
+                    transition: transform 0.3s ease-in-out;
+
+                    @media screen and (max-width: 767px) {
+                        transform: translate(0px, 0px);
+                    }
+                }
+
+                .zoom-logo {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    height: 25px;
+                    width: 25px;
+                    transform: translate(-50%, -50%);
+                    display: block;
+                    z-index: 25;
+                    opacity: 0.7;
+                    transition: opacity 0.2s, transform 0.2s;
+
+                    &:hover {
+                        opacity: 1;
+                        transform: translate(-50%, -50%) scale(1.2);
+                    }
+                }
+
+                .photo {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    border-radius: 0.2em;
+                }
+
+                .grayscale {
+                    filter: brightness(50%);
+                }
+
+                @media screen and (max-width: 1024px) {
+                    height: 160px;
+                    width: 110px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    height: 80px;
+                    width: 55px;
+                }
+            }
+
+            .image-container-1 {
+                left: 50px;
+
+                @media screen and (max-width: 1024px) {
+                    left: 40px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    left: -10px;
+                }
+            }
+
+            .image-container-2 {
+                left: -45px;
+
+                @media screen and (max-width: 1024px) {
+                    left: -40px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    left: -5px;
+                }
+            }
+
+            .image-container-3 {
+                left: -140px;
+
+                @media screen and (max-width: 1024px) {
+                    left: -120px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    left: 0px;
+                }
+            }
+
+            .image-container-4 {
+                left: -235px;
+
+                @media screen and (max-width: 1024px) {
+                    left: -200px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    height: 95px;
+                    width: 70px;
+                    border: 2px solid white;
+                    left: 35px;
+                    top: -9px;
+                }
+            }
+        }
+    }
+
+
+    .SectionGalerie {
+        position: relative;
+        max-height: 707px;
+        width: 100%;
+        overflow: hidden;
+
+        .backgroundimg {
+            filter: blur(5px);
+            height: 100vh;
+            width: 100%;
+            transform: scale(2);
+
+            &.description-active {
+                filter: blur(10px);
+            }
+        }
+
+        .backgroundimg_1 {
+            filter: blur(5px);
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 0px;
+            transform: scale(2);
+        }
+
+        .Container_Galerie {
+            position: absolute;
+            width: 88%;
+            height: 92.4%;
+            top: 27px;
+            left: 9.9%;
+            overflow: hidden;
+            box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
+            background-color: rgb(255, 255, 255, 0.9);
+
+            @media screen and (max-width: 1024px) {
+                left: 8.9%;
+            }
+
+            @media screen and (max-width: 767px) {
+                left: 6%;
+            }
+
+            .Galerie {
+                height: 100%;
+                @extend %flex-center;
+
+
+                @media screen and (max-width: 767px) {
+                    flex-direction: column;
+                }
+
+                .Titre_Galerie {
+                    display: none;
+                }
+
+                h2 {
+                    color: black;
+                    font-size: 55px;
+                    text-shadow: 1px 1px 2px #555;
+                    margin: 0;
+                    padding: 0;
+
+                    @media screen and (max-width: 1024px) {
+                        font-size: 34px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        font-size: 48px;
+                    }
+                }
+
+                @media screen and (max-width: 1024px) {
+                    padding-left: 2em;
+                }
+
+                @media screen and (max-width: 767px) {
+                    padding-left: 0em;
+                }
+
+            }
+
+            .Details {
+                @extend %column-center;
+                width: 60%;
+                padding-bottom: 1em;
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                }
+
+                &.Details-active {
+                    animation: ApparitionDescriptif 1.5s ease;
+                    animation-fill-mode: forwards;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    transition: transform 0.8s ease;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.08);
+                    }
+                }
+            }
+        }
+    }
+
+    .SectionApropos {
+        position: relative;
+        max-height: 707px;
+        width: 100%;
+        overflow: hidden;
+
+        .backgroundimg {
+            filter: blur(5px);
+            height: 100vh;
+            width: 100%;
+            transform: scale(2);
+        }
+
+        .Container_Apropos {
+            position: absolute;
+            width: 88%;
+            height: 92.4%;
+            top: 27px;
+            left: 9.9%;
+            overflow: hidden;
+            box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
+            background-color: rgb(255, 255, 255, 0.9);
+
+            @media screen and (max-width: 1024px) {
+                left: 8.9%;
+            }
+
+            @media screen and (max-width: 767px) {
+                left: 6%;
+            }
+
+            .Apropos {
+                @extend %flex-center;
+                margin: auto;
+                gap: 4em;
+                height: 100%;
+
+                @media screen and (max-width: 1024px) {
+                    gap: 2em;
+                    padding-left: 2em;
+                }
+
+                @media screen and (max-width: 767px) {
+                    flex-direction: column;
+                    padding-left: 0em;
+                }
+
+
+                .Block_Texte {
+                    width: 40%;
+                    text-align: justify;
+
+                    @media screen and (max-width: 1024px) {
+                        width: 45%;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        width: 80%;
+                    }
+
+                    p {
+                        color: black;
+
+                        @media screen and (max-width: 767px) {
+                            font-size: 10px;
+                        }
+                    }
+
+                }
+
+                .Block_Img {
+                    width: 50%;
+                    height: 80%;
+
+                    @media screen and (max-width: 1024px) {
+                        width: 40%;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        width: 70%;
+                        height: 44%;
+                    }
+
+                    .Backphoto {
+                        background-color: #1D73A3;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .Photo_Brendan {
+                        object-position: top;
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px, rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+                    }
+                }
+            }
+
+            h2 {
+                color: black;
+                font-size: 55px;
+                text-shadow: 1px 1px 2px #555;
+
+                @media screen and (max-width: 1024px) {
+                    font-size: 33px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    font-size: 18px;
+                }
+            }
+
+        }
+    }
+
+    .SectionContact {
+        position: relative;
+        max-height: 707px;
+        width: 100%;
+        overflow: hidden;
+
+        .backgroundimg {
+            filter: blur(5px);
+            height: 100vh;
+            width: 100%;
+            transform: scale(2);
+        }
+
+        .Container_Contact {
+            position: absolute;
+            width: 88%;
+            height: 92.4%;
+            top: 27px;
+            left: 9.9%;
+            overflow: hidden;
+            box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
+            background-color: rgb(255, 255, 255, 0.9);
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+
+            @media screen and (max-width: 1024px) {
+                left: 8.9%;
+            }
+
+            @media screen and (max-width: 767px) {
+                left: 6%;
+            }
+
+            .Contact {
+                display: flex;
+                gap: 4em;
+                height: 100%;
+
+                @media screen and (max-width: 1024px) {
+                    justify-content: center;
+                    align-items: center;
+                }
+
+
+                .Block_Texte {
+                    @extend %column-center-0;
+                    width: 55%;
+
+                    @media screen and (max-width: 1024px) {
+                        width: 80%;
+                    }
+
+                    ul {
+                        display: flex;
+                        padding: 0;
+
+                        li {
+                            @extend %column-center-0;
+
+                            img {
+                                width: 15%;
+                                padding: 25px;
+                                color: white;
+                                border-radius: 5px;
+                                box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
+                                margin: 1em;
+                                cursor: pointer;
+                            }
+
+                            p {
+                                opacity: 0;
+                                margin: 0;
+                                transition: opacity 0.4s;
+                            }
+
+                            .active {
+                                opacity: 1;
+                                display: block;
+                            }
+
+                            .Reseaux-Flex {
+                                p {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .Block_Img {
+                    width: 35%;
+                    height: 100%;
+
+                    @media screen and (max-width: 1024px) {
+                        display: none;
+                    }
+
+                    .Backphoto {
+                        background-color: #1D73A3;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .Photo_Theo {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px, rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+                    }
+                }
+            }
+
+            h2 {
+                color: black;
+                font-size: 35px;
+                text-shadow: 1px 1px 2px #555;
+
+                @media screen and (max-width: 767px) {
+                    font-size: 27px;
+                    margin: 0;
+                }
+
+            }
+
+            .Formulaire {
+                @extend %column-center-0;
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin: auto;
+
+                    div {
+                        width: 100%;
+                    }
+
+                    input.Nom,
+                    input.Email,
+                    input.Sujet {
+                        margin-bottom: 16px;
+                        padding: 8px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        font-size: 14px;
+                    }
+
+                    input.Nom,
+                    input.Email,
+                    input.Sujet {
+                        width: 30%;
+
+                        @media screen and (max-width: 767px) {
+                            width: 25%;
+                        }
+
+                    }
+
+                    textarea {
+                        margin-bottom: 16px;
+                        padding: 8px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .btn {
+                box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
+                color: rgb(9, 9, 9);
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #000000;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .animation {
+        animation: slideInFromRight 1.5s ease;
+    }
+
+    .animation-1 {
+        animation: slideInFromLeft 1.5s ease;
+        animation-fill-mode: forwards;
+    }
+
+    .background-animation {
+        animation: slideInFromRightBack 1.5s ease;
+    }
+
+    .background-animation_1 {
+        animation: slideInFromLeftBack 1.5s ease;
+    }
+
+    @media screen and (max-width: 1024px) {
+
+        p,
+        a {
+            font-size: 12px;
+        }
+    }
+}

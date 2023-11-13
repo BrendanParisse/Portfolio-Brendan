@@ -1,0 +1,45 @@
+.Skills-list {
+    @extend %flex-center;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    gap: 1.5em;
+    padding-top: 2em;
+
+    @media screen and (max-width: 767px) {
+        padding-top: 1em;
+    }
+
+    .skills {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
+    }
+
+    .HTML {
+        width: 15%;
+        background-color: #E44D26;
+    }
+
+    .CSS {
+        width: 15%;
+        background-color: #2196F3;
+    }
+
+    .JS {
+        width: 15%;
+        background-color: #F7E018;
+    }
+
+    .SCSS {
+        width: 15%;
+        background-color: #bf3591;
+    }
+
+    .REACTJS {
+        width: 15%;
+        background-color: #61DAFB;
+    }
+}

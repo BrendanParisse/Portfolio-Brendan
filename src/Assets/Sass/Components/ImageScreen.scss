@@ -1,0 +1,86 @@
+.Screen-Desktop {
+    position: absolute;
+    top: 100px;
+    left: 19%;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    z-index: 20;
+    width: 39vw;
+    height: 70%;
+
+    &:hover img {
+        transform: perspective(55px) rotateX(0deg) rotateY(1.3deg) rotateZ(0deg);
+        filter: brightness(50%);
+    }
+
+    &:hover .container_liens {
+        opacity: 1;
+    }
+
+    img {
+        object-position: top;
+        object-fit: cover;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        transition: transform 1s ease;
+        box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
+        transform: perspective(45px) rotateX(0deg) rotateY(0.7deg) rotateZ(0deg);
+        filter: brightness(100%);
+        transition: transform 1s ease, filter 0.3s ease;
+    }
+
+    .container_liens {
+        position: absolute;
+        display: flex;
+        top: 45%;
+        left: 33%;
+        margin-top: 10px;
+        transform: perspective(55px) rotateX(0deg) rotateY(3deg) rotateZ(0deg);
+        gap: 2em;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        a {
+            display: block;
+            padding: 10px;
+            border: solid 2px white;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 5px;
+
+            @media screen and (max-width: 768px) {
+                padding: 5px;
+                font-size: 8px;
+            }
+
+            &:hover {
+                background: white;
+                color: black;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            left: 10%;
+        }
+
+        @media screen and (max-width: 768px) {
+            left: 13%;
+            top: 33%;
+            gap: 1em;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 30vw;
+        left: 28%;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 43vw;
+        height: 19%;
+        left: 27%;
+        top: 23.5%;
+    }
+}

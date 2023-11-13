@@ -1,0 +1,15 @@
+.footer-standard {
+    bottom: 0px;
+    left: 45%;
+    position: absolute;
+    color: white;
+    font-size: 14px;
+
+    @media screen and (max-width: 767px) {
+        left: 25%;
+    }
+
+    p {
+        margin: 5px;
+    }
+}
