@@ -1,12 +1,12 @@
 .Screen-Desktop {
     position: absolute;
-    top: 100px;
-    left: 19%;
+    top: 116px;
+    left: 25%;
     text-align: center;
     transition: opacity 0.3s ease;
     z-index: 20;
-    width: 39vw;
-    height: 70%;
+    width: 34vw;
+    height: 59vh;
 
     &:hover img {
         transform: perspective(55px) rotateX(0deg) rotateY(1.3deg) rotateZ(0deg);

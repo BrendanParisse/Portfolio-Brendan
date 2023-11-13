@@ -17,7 +17,7 @@ body {
             filter: blur(5px);
             width: 100%;
             transform: scale(2);
-            height: 100%;
+            height: 100vh;
         }
 
         .backgroundimg_1 {
@@ -26,7 +26,7 @@ body {
             width: 100%;
             top: 0px;
             transform: scale(2);
-            height: 100%;
+            height: 100vh;
         }
 
         .background_menu {
@@ -99,8 +99,8 @@ body {
 
             .image-container {
                 position: relative;
-                height: 180px;
-                width: 125px;
+                height: 200px;
+                width: 135px;
                 transition: transform 0.3s ease-in-out;
                 cursor: pointer;
                 filter: brightness(100%);
@@ -571,8 +571,7 @@ body {
                 @extend %column-center-0;
 
                 form {
-                    display: flex;
-                    flex-direction: column;
+                    @extend %column-center-0;
                     width: 100%;
                     margin: auto;
 
@@ -584,7 +583,6 @@ body {
                     input.Email,
                     input.Sujet {
                         margin-bottom: 16px;
-                        padding: 8px;
                         border: 1px solid #ccc;
                         border-radius: 4px;
                         font-size: 14px;
@@ -607,6 +605,7 @@ body {
                         border: 1px solid #ccc;
                         border-radius: 4px;
                         font-size: 14px;
+                        width: 100%;
                     }
                 }
             }

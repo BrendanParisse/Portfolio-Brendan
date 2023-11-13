@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import Photo_Brendan from '../../../Assets/Images/BrendanParisse.avif';
 import Reseaux from '../../../Assets/Images/Reseaux.svg';
 import Phone from '../../../Assets/Images/Phone.svg'
-import Mail from '../../../Assets/Images/Mail.svg'
+import Mail from '../../../Assets/Images/Mail.svg';
+import ContactForm from '../../../Components/Formulaire/Formulaire';
 
 const Apropos = () => {
     const [currentImage] = useState(Photo_Brendan);
@@ -11,6 +13,17 @@ const Apropos = () => {
 
     const handleImageClick = (index) => {
         setActiveIndex(index);
+    };
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_racv4je', 'template_kv64teu', e.target)
+            .then((result) => {
+                console.log('SUCCESS!', result.text);
+            }, (error) => {
+                console.log('FAILED...', error.text);
+            });
     };
 
     return (
@@ -48,22 +61,13 @@ const Apropos = () => {
                             </ul>
                         </div>
                         <div className='Formulaire'>
-                            <form action="#" method="post">
-                                <div>
-                                    <input className='Nom' placeholder='Nom' type="text" name="name" id="name" />
-                                    <input className='Email' placeholder='Mail' type="email" name="email" id="email" />
-                                    <input className='Sujet' placeholder='Sujet' type="text" name="sujet" id="sujet" />
-                                </div>
-                                <textarea name="message" placeholder='Message' id="message" cols="30" rows="10"></textarea>
-                            </form>
-                            <input className='btn' type="submit" value="Envoyer" id="LoginButton" />
+                            <ContactForm sendEmail={sendEmail} />
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
     );
-}
+};
 
 export default Apropos;
