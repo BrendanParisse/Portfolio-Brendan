@@ -10,6 +10,7 @@ const Apropos = () => {
     const [currentImage] = useState(Photo_Brendan);
     const [applyAnimation] = useState(true);
     const [activeIndex, setActiveIndex] = useState(null);
+    const [messageSent, setMessageSent] = useState(false);
 
     const handleImageClick = (index) => {
         setActiveIndex(index);
@@ -21,10 +22,14 @@ const Apropos = () => {
         emailjs.sendForm('service_racv4je', 'template_kv64teu', e.target)
             .then((result) => {
                 console.log('SUCCESS!', result.text);
+                setMessageSent(true);
+                setTimeout(() => setMessageSent(false), 5000); // Remet le message à false après 3 secondes
+                e.target.reset(); // Réinitialise les champs du formulaire
             }, (error) => {
                 console.log('FAILED...', error.text);
             });
     };
+
 
     return (
         <section className="SectionContact">
@@ -62,6 +67,7 @@ const Apropos = () => {
                         </div>
                         <div className='Formulaire'>
                             <ContactForm sendEmail={sendEmail} />
+                            {messageSent && <p>Message envoyé avec succés!</p>}
                         </div>
                     </div>
                 </div>
