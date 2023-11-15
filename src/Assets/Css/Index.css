@@ -1108,7 +1108,7 @@ body .background-animation_1 {
   }
 }
 
-.footer-standard {
+footer {
   bottom: 0px;
   left: 45%;
   position: absolute;
@@ -1116,11 +1116,11 @@ body .background-animation_1 {
   font-size: 14px;
 }
 @media screen and (max-width: 769px) {
-  .footer-standard {
+  footer {
     left: 25%;
   }
 }
-.footer-standard p {
+footer p {
   margin: 5px;
 }
 
