@@ -514,6 +514,11 @@ body {
                         margin: 0;
                     }
 
+                    @media screen and (max-width: 769px) {
+                        font-size: 18px;
+                        margin: 0;
+                    }
+
                 }
 
                 .Block_Texte {
@@ -523,6 +528,12 @@ body {
                     @media screen and (max-width: 1024px) {
                         width: 80%;
                         margin-top: 7em;
+                    }
+
+                    @media screen and (max-width: 769px) {
+                        width: 80%;
+                        height: 38%;
+                        margin-top: 5em;
                     }
                 }
 
@@ -561,7 +572,7 @@ body {
                         }
 
                         @media screen and (max-width: 769px) {
-                            top: -130px;
+                            top: -9px;
                             left: 0%;
                         }
 
@@ -625,10 +636,9 @@ body {
             .Formulaire {
                 @extend %column-center-0;
                 width: 80%;
-                padding-left: 3.5em;
 
                 @media screen and (max-width: 769px) {
-                    padding-left: 0em;
+                    height: 100%;
                 }
 
                 form {

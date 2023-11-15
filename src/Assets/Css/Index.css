@@ -913,6 +913,12 @@ body .SectionContact .Container_Contact .Contact h2 {
     margin: 0;
   }
 }
+@media screen and (max-width: 769px) {
+  body .SectionContact .Container_Contact .Contact h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+}
 body .SectionContact .Container_Contact .Contact .Block_Texte {
   width: 55%;
 }
@@ -920,6 +926,13 @@ body .SectionContact .Container_Contact .Contact .Block_Texte {
   body .SectionContact .Container_Contact .Contact .Block_Texte {
     width: 80%;
     margin-top: 7em;
+  }
+}
+@media screen and (max-width: 769px) {
+  body .SectionContact .Container_Contact .Contact .Block_Texte {
+    width: 80%;
+    height: 38%;
+    margin-top: 5em;
   }
 }
 body .SectionContact .Container_Contact .Contact .Block_Img {
@@ -961,7 +974,7 @@ body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact {
 }
 @media screen and (max-width: 769px) {
   body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact {
-    top: -130px;
+    top: -9px;
     left: 0%;
   }
 }
@@ -1018,11 +1031,10 @@ body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact ul li
 }
 body .SectionContact .Container_Contact .Formulaire {
   width: 80%;
-  padding-left: 3.5em;
 }
 @media screen and (max-width: 769px) {
   body .SectionContact .Container_Contact .Formulaire {
-    padding-left: 0em;
+    height: 100%;
   }
 }
 body .SectionContact .Container_Contact .Formulaire form {
