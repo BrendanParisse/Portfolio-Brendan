@@ -47,14 +47,14 @@ body .SectionApropos .Container_Apropos .Apropos, body .SectionGalerie .Containe
   justify-content: center;
 }
 
-body .SectionContact .Container_Contact .Contact .Block_Texte, body .SectionGalerie .Container_Galerie .Details, body .Bannière .background_menu .Projet_Contenu, .Carrousel li div {
+body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact ul, body .SectionContact .Container_Contact .Contact .Block_Texte, body .SectionGalerie .Container_Galerie .Details, body .Bannière .background_menu .Projet_Contenu, .Carrousel li div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-body .SectionContact .Container_Contact .Formulaire form, body .SectionContact .Container_Contact .Formulaire, body .SectionContact .Container_Contact .Contact .Block_Texte ul li, header ul, header {
+body .SectionContact .Container_Contact .Formulaire form, body .SectionContact .Container_Contact .Formulaire, header ul, header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -225,6 +225,11 @@ body .SectionContact .Container_Contact .Formulaire form, body .SectionContact .
 }
 @media screen and (max-width: 1024px) {
   .ProjectDescription p {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 769px) {
+  .ProjectDescription p {
     font-size: 12px;
     margin-bottom: 0;
   }
@@ -329,7 +334,7 @@ header {
 @media screen and (max-width: 769px) {
   header {
     justify-content: center;
-    height: 4%;
+    height: 3%;
     flex-direction: row;
     width: 90%;
     left: 20px;
@@ -360,7 +365,7 @@ header ul {
 header ul li {
   font-size: 16px;
   font-family: "Alata";
-  opacity: 0.8;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 header ul li .elmenu {
@@ -374,7 +379,7 @@ header ul li .elmenu {
   }
 }
 header ul li:hover {
-  opacity: 1;
+  opacity: 0.3;
 }
 header ul li .active {
   border-bottom: 1px solid black;
@@ -530,6 +535,12 @@ body .Bannière .Photos .image-container .zoom-logo {
   opacity: 0.7;
   transition: opacity 0.2s, transform 0.2s;
 }
+@media screen and (max-width: 769px) {
+  body .Bannière .Photos .image-container .zoom-logo {
+    height: 20px;
+    width: 20px;
+  }
+}
 body .Bannière .Photos .image-container .zoom-logo:hover {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1.2);
@@ -546,14 +557,14 @@ body .Bannière .Photos .image-container .grayscale {
 }
 @media screen and (max-width: 1024px) {
   body .Bannière .Photos .image-container {
-    height: 160px;
-    width: 110px;
+    height: 200px;
+    width: 115px;
   }
 }
 @media screen and (max-width: 769px) {
   body .Bannière .Photos .image-container {
-    height: 80px;
-    width: 55px;
+    height: 88px;
+    width: 53px;
   }
 }
 body .Bannière .Photos .image-container-1 {
@@ -607,10 +618,13 @@ body .Bannière .Photos .image-container-4 {
   body .Bannière .Photos .image-container-4 {
     height: 95px;
     width: 70px;
-    border: 2px solid white;
     left: 35px;
-    top: -9px;
+    top: -6px;
   }
+}
+body .Bannière .Photos .image-container-4 img {
+  border: rgba(255, 255, 255, 0.9) solid 2px;
+  border-radius: 0.2em;
 }
 body .SectionGalerie {
   position: relative;
@@ -869,13 +883,34 @@ body .SectionContact .Container_Contact {
 }
 body .SectionContact .Container_Contact .Contact {
   display: flex;
-  gap: 4em;
+  gap: 2em;
   height: 100%;
 }
 @media screen and (max-width: 1024px) {
   body .SectionContact .Container_Contact .Contact {
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+  }
+}
+@media screen and (max-width: 769px) {
+  body .SectionContact .Container_Contact .Contact {
+    justify-content: unset;
+  }
+}
+body .SectionContact .Container_Contact .Contact h2 {
+  position: absolute;
+  left: 5%;
+  color: rgb(0, 0, 0);
+  font-size: 28px;
+  text-shadow: 1px 1px 2px #555;
+  z-index: 10;
+}
+@media screen and (max-width: 1024px) {
+  body .SectionContact .Container_Contact .Contact h2 {
+    top: 20px;
+    font-size: 27px;
+    margin: 0;
   }
 }
 body .SectionContact .Container_Contact .Contact .Block_Texte {
@@ -884,62 +919,110 @@ body .SectionContact .Container_Contact .Contact .Block_Texte {
 @media screen and (max-width: 1024px) {
   body .SectionContact .Container_Contact .Contact .Block_Texte {
     width: 80%;
+    margin-top: 7em;
   }
 }
-body .SectionContact .Container_Contact .Contact .Block_Texte ul {
-  display: flex;
-  padding: 0;
-}
-body .SectionContact .Container_Contact .Contact .Block_Texte ul li img {
-  width: 15%;
-  padding: 25px;
-  color: white;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
-  margin: 1em;
-  cursor: pointer;
-}
-body .SectionContact .Container_Contact .Contact .Block_Texte ul li p {
-  opacity: 0;
-  margin: 0;
-  transition: opacity 0.4s;
-}
-body .SectionContact .Container_Contact .Contact .Block_Texte ul li .active {
-  opacity: 1;
-  display: block;
-}
-body .SectionContact .Container_Contact .Contact .Block_Texte ul li .Reseaux-Flex p {
-  cursor: pointer;
-}
 body .SectionContact .Container_Contact .Contact .Block_Img {
-  width: 35%;
+  position: relative;
+  width: 55%;
   height: 100%;
 }
 @media screen and (max-width: 1024px) {
   body .SectionContact .Container_Contact .Contact .Block_Img {
-    display: none;
+    width: 100%;
   }
 }
-body .SectionContact .Container_Contact .Contact .Block_Img .Backphoto {
-  background-color: #1D73A3;
-  width: 100%;
-  height: 100%;
+@media screen and (max-width: 769px) {
+  body .SectionContact .Container_Contact .Contact .Block_Img {
+    height: 5%;
+  }
 }
-body .SectionContact .Container_Contact .Contact .Block_Img .Photo_Theo {
+body .SectionContact .Container_Contact .Contact .Block_Img .Photo_Brendan {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  filter: brightness(60%);
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px, rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-body .SectionContact .Container_Contact h2 {
-  color: black;
-  font-size: 35px;
-  text-shadow: 1px 1px 2px #555;
+@media screen and (max-width: 769px) {
+  body .SectionContact .Container_Contact .Contact .Block_Img .Photo_Brendan {
+    display: none;
+  }
+}
+body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact {
+  position: absolute;
+  top: 28%;
+  left: 2%;
+}
+@media screen and (max-width: 1024px) {
+  body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact {
+    left: 22%;
+  }
 }
 @media screen and (max-width: 769px) {
-  body .SectionContact .Container_Contact h2 {
-    font-size: 27px;
+  body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact {
+    top: -130px;
+    left: 0%;
+  }
+}
+body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact ul {
+  padding: 0;
+  gap: 1em;
+  list-style: none;
+}
+@media screen and (max-width: 769px) {
+  body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact ul {
     margin: 0;
+  }
+}
+body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact ul li {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  gap: 2em;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
+}
+@media screen and (max-width: 769px) {
+  body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact ul li {
+    gap: 1em;
+  }
+}
+body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact ul li img {
+  width: 10%;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
+  border-radius: 5px;
+}
+@media screen and (max-width: 769px) {
+  body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact ul li img {
+    padding: 10px;
+    width: 5%;
+  }
+}
+body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact ul li p {
+  margin: 0;
+  color: rgb(0, 0, 0);
+}
+body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact ul li .info {
+  opacity: 0.6;
+  padding-left: 0.3em;
+}
+@media screen and (max-width: 769px) {
+  body .SectionContact .Container_Contact .Contact .Block_Img .Infos_Contact ul li .info {
+    padding: 0;
+  }
+}
+body .SectionContact .Container_Contact .Formulaire {
+  width: 80%;
+  padding-left: 3.5em;
+}
+@media screen and (max-width: 769px) {
+  body .SectionContact .Container_Contact .Formulaire {
+    padding-left: 0em;
   }
 }
 body .SectionContact .Container_Contact .Formulaire form {
@@ -948,34 +1031,38 @@ body .SectionContact .Container_Contact .Formulaire form {
 }
 body .SectionContact .Container_Contact .Formulaire form div {
   width: 100%;
+  display: flex;
 }
 body .SectionContact .Container_Contact .Formulaire form input.Nom,
 body .SectionContact .Container_Contact .Formulaire form input.Email,
-body .SectionContact .Container_Contact .Formulaire form input.Sujet {
+body .SectionContact .Container_Contact .Formulaire form input.Sujet,
+body .SectionContact .Container_Contact .Formulaire form input.Phone {
   margin-bottom: 16px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 4px;
   font-size: 14px;
+  padding: 15px;
+  margin: 0.3em;
 }
 body .SectionContact .Container_Contact .Formulaire form input.Nom,
 body .SectionContact .Container_Contact .Formulaire form input.Email,
-body .SectionContact .Container_Contact .Formulaire form input.Sujet {
-  width: 30%;
-}
-@media screen and (max-width: 769px) {
-  body .SectionContact .Container_Contact .Formulaire form input.Nom,
-  body .SectionContact .Container_Contact .Formulaire form input.Email,
-  body .SectionContact .Container_Contact .Formulaire form input.Sujet {
-    width: 25%;
-  }
+body .SectionContact .Container_Contact .Formulaire form input.Sujet,
+body .SectionContact .Container_Contact .Formulaire form input.Phone {
+  width: 100%;
 }
 body .SectionContact .Container_Contact .Formulaire form textarea {
+  margin-top: 6px;
   margin-bottom: 16px;
-  padding: 8px;
-  border: 1px solid #ccc;
+  padding: 15px;
+  border: none;
   border-radius: 4px;
   font-size: 14px;
   width: 100%;
+}
+@media screen and (max-width: 769px) {
+  body .SectionContact .Container_Contact .Formulaire form textarea {
+    height: 10%;
+  }
 }
 body .SectionContact .Container_Contact .btn {
   box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);

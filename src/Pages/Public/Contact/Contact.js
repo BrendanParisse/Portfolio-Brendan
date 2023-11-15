@@ -4,17 +4,15 @@ import Photo_Brendan from '../../../Assets/Images/BrendanParisse.avif';
 import Reseaux from '../../../Assets/Images/Reseaux.svg';
 import Phone from '../../../Assets/Images/Phone.svg'
 import Mail from '../../../Assets/Images/Mail.svg';
+import location from '../../../Assets/Images/location.svg';
 import ContactForm from '../../../Components/Formulaire/Formulaire';
 
 const Apropos = () => {
     const [currentImage] = useState(Photo_Brendan);
     const [applyAnimation] = useState(true);
-    const [activeIndex, setActiveIndex] = useState(null);
     const [messageSent, setMessageSent] = useState(false);
 
-    const handleImageClick = (index) => {
-        setActiveIndex(index);
-    };
+
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -23,8 +21,7 @@ const Apropos = () => {
             .then((result) => {
                 console.log('SUCCESS!', result.text);
                 setMessageSent(true);
-                setTimeout(() => setMessageSent(false), 5000); // Remet le message à false après 3 secondes
-                e.target.reset(); // Réinitialise les champs du formulaire
+                e.target.reset();
             }, (error) => {
                 console.log('FAILED...', error.text);
             });
@@ -40,34 +37,45 @@ const Apropos = () => {
             />
             <div className='Container_Contact'>
                 <div className='Contact'>
-                    <div className='Block_Img'>
-                        <div className='Back_Photo'></div>
-                        <img className='Photo_Theo' src={Photo_Brendan} alt="PhotoTheo" />
-                    </div>
+                    <h2>BESOIN D'UN RENSEIGNEMENT ?</h2>
                     <div className='Block_Texte'>
-                        <h2>BESOIN D'UN RENSEIGNEMENT ?</h2>
+                        <ContactForm sendEmail={sendEmail} />
+                        {messageSent && <p>Message envoyé avec succés!</p>}
+                    </div>
+                    <div className='Block_Img'>
+                        <img className='Photo_Brendan' src={Photo_Brendan} alt="PhotoBrendan" />
                         <div className='Infos_Contact'>
                             <ul>
                                 <li>
-                                    <img onClick={() => handleImageClick(0)} src={Phone} alt="Phone" />
-                                    <p className={activeIndex === 0 ? 'active' : ''}>06.28.80.22.14</p>
-                                </li>
-                                <li>
-                                    <img onClick={() => handleImageClick(1)} src={Mail} alt="Mail" />
-                                    <p className={activeIndex === 1 ? 'active' : ''}>brendan.parisse@yahoo.fr</p>
-                                </li>
-                                <li>
-                                    <img onClick={() => handleImageClick(2)} src={Reseaux} alt="Mail" />
+                                    <img className='Phone' src={Phone} alt="Phone" />
                                     <div className='Reseaux-Flex'>
-                                        <p className={activeIndex === 2 ? 'active' : ''}>Facebook</p>
-                                        <p className={activeIndex === 2 ? 'active' : ''}>Instragram</p>
+                                        <p className='infoT'>Numéro de téléphone</p>
+                                        <p className='info'>06.28.80.22.14</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img className='Mail' src={Mail} alt="Mail" />
+                                    <div className='Reseaux-Flex'>
+                                        <p className='infoT'>Adresse mail</p>
+                                        <p className='info'>brendan.parisse@yahoo.fr</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img className='Reseaux' src={Reseaux} alt="Mail" />
+                                    <div className='Reseaux-Flex'>
+                                        <p className='infoT'>Réseaux</p>
+                                        <p className='info'>Facebook</p>
+                                        <p className='info'>Instragram</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img className='Location' src={location} alt="Mail" />
+                                    <div className='Reseaux-Flex'>
+                                        <p className='infoT'>Localisation</p>
+                                        <p className='info'>Brest, 29200</p>
                                     </div>
                                 </li>
                             </ul>
-                        </div>
-                        <div className='Formulaire'>
-                            <ContactForm sendEmail={sendEmail} />
-                            {messageSent && <p>Message envoyé avec succés!</p>}
                         </div>
                     </div>
                 </div>

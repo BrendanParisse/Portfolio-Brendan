@@ -11,7 +11,7 @@ header {
 
     @media screen and (max-width: 769px) {
         justify-content: center;
-        height: 4%;
+        height: 3%;
         flex-direction: row;
         width: 90%;
         left: 20px;
@@ -44,7 +44,7 @@ header {
         li {
             font-size: 16px;
             font-family: 'Alata';
-            opacity: 0.8;
+            opacity: 1;
             transition: opacity 0.3s ease;
 
             .elmenu {
@@ -58,7 +58,7 @@ header {
             }
 
             &:hover {
-                opacity: 1;
+                opacity: 0.3;
             }
 
             .active {

@@ -113,7 +113,8 @@ const Accueil = () => {
                                 onClick={() => handleClick(index)}
                                 onMouseEnter={() => handleMouseEnter(index)}
                                 onMouseLeave={handleMouseLeave}
-                                className={`photo photo-${index} ${hoveredIndex === index ? 'hovered ' : ''}`}
+                                className={`photo photo-${index} ${hoveredIndex === index ? 'hovered ' : ''
+                                    }${hoveredIndex !== null && hoveredIndex !== index ? 'grayscale' : ''}`}
                             />
                         </div>
                     ))}
