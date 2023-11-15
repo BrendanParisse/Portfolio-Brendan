@@ -12,8 +12,6 @@ const Apropos = () => {
     const [applyAnimation] = useState(true);
     const [messageSent, setMessageSent] = useState(false);
 
-
-
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -26,7 +24,6 @@ const Apropos = () => {
                 console.log('FAILED...', error.text);
             });
     };
-
 
     return (
         <section className="SectionContact">
