@@ -1,8 +1,6 @@
-const Footer = ({ isHomePage }) => {
-    const footerClass = isHomePage ? 'footer-home' : 'footer-standard';
-
+const Footer = () => {
     return (
-        <footer className={footerClass}>
+        <footer>
             <p> Copyright BrendanParisse @2023</p>
         </footer>
     );

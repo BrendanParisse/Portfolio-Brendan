@@ -1,4 +1,3 @@
-// Carrousel.js
 import React from 'react';
 
 const Carousel = ({ Booki, Ohmyfood, Kasa, Portfolio, onCarouselClick, hoveredIndex, activeIndex, descriptionActive }) => {
