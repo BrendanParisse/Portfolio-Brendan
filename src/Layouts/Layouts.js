@@ -4,14 +4,14 @@ import { Outlet } from 'react-router-dom';
 
 
 
-const Layout = ({ isHomePage, isGaleriePage }) => {
+const Layout = () => {
     return (
         <div className="ContainerLayout">
-            <Header isHomePage={isHomePage} isGaleriePage={isGaleriePage} />
+            <Header />
             <main>
                 <Outlet />
             </main>
-            <Footer isHomePage={isHomePage} />
+            <Footer />
         </div>
     );
 };
